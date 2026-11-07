@@ -1,0 +1,20 @@
+# Local only: the design-history archive. It holds printer-camera frames and reference photos
+# that aren't ours to publish. Web-size renders for the site are in docs/img.
+history/
+
+# Full-size design sheets (the site uses web-size copies)
+sheets/
+
+# Printer details and the vendored MQTT library (pip install -r requirements.txt instead)
+tools/printer.json
+tools/pylib/
+tools/presets/machine_with_tunes.json
+tools/presets/out_*/
+
+# Camera frames, wherever they land
+bed_*.jpg
+*_snapshot.jpg
+
+__pycache__/
+*.pyc
+*.tmp

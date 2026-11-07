@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it&#x27;s made · Fun with Fishtanks</title>
+<meta name="description" content="The toolchain behind the prints: OpenSCAD, layer-by-layer support checks, command-line slicing and move checks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 11c5-8 15-9 22-3l7-5v16l-7-5c-7 6-17 5-22-3z" fill="#7fd0dc"/><circle cx="9" cy="9.5" r="1.6" fill="#0f3d48"/></svg>Fun with Fishtanks</a>
+<nav class="nav" aria-label="Site"><a href="index.html">Home</a><a href="projects/risers.html">Risers</a><a href="projects/walkway.html">Walkway</a><a href="projects/ring.html">Ring</a><a href="how-its-made.html" aria-current="page">How it's made</a></nav>
+</div></header>
+<section class="hero"><div class="wrap hero-grid">
+<div><h1>How it's made</h1><p class="lede">Every model is code, every file is checked before it reaches the printer, and the printer is driven over the local network. Here's the path from idea to plastic, and the lessons that shaped it.</p><ul class="facts"><li>OpenSCAD 2021.01</li><li>Bambu Studio CLI</li><li>Python</li><li>LAN mode</li></ul></div>
+<img src="img/walkway/bath-parts.webp" alt="Exploded view of the bathhouse parts" width="1600" height="1000">
+</div></section>
+<main><div class="wrap">
+
+<h2>From idea to plastic</h2>
+<ul class="timeline">
+<li><time>1. Model</time>Each part is an OpenSCAD file with its sizes as settings at the top. Rendered mock-ups come first, then the printable split.</li>
+<li><time>2. Check for overhangs</time><code>printcheck.py</code> slices the STL every 0.2 mm and compares each layer with the one below, reporting anything that would start in mid-air.</li>
+<li><time>3. Slice</time><code>slice.py</code> runs Bambu Studio from the command line with presets that have no start or finish tune.</li>
+<li><time>4. Preflight</time><code>preflight.py</code> checks the file is intact and sliced for the A1 mini, follows every move (arcs included) to make sure it stays inside the printer's range, and checks the material and that the printer is idle.</li>
+<li><time>5. Clear plate</time>A frame from the printer's camera confirms the plate is empty before anything starts.</li>
+<li><time>6. Print</time><code>bambu.py</code> uploads the file and starts it over the local network.</li>
+</ul>
+<p>The tools are in the <a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/tree/main/tools">tools folder</a>, with setup notes in its README.</p>
+
+<h2>Lessons learned</h2>
+<ul class="rules">
+<li><strong>Check every move, not just the part</strong>A file once carried another printer's start-up moves, reaching far past the 7-inch bed. Now preflight follows every move before a file is sent.</li>
+<li><strong>Find the cause before trying again</strong>After a start-up fault, a quick restart without anyone checking the printer sent the toolhead into the nozzle wiper. Now nothing restarts until the cause is found.</li>
+<li><strong>Thin parts climb on their own</strong>Knee braces printed upside down grew as free-standing 45-degree sticks and snapped off. Anything that rises alone needs real thickness.</li>
+<li><strong>Test the fit</strong>Lantern pegs with 0.15 mm of play came out loose. Small fit tests with several plays now come before big parts.</li>
+<li><strong>A slicer that hangs</strong>The command-line slicer froze forever on a hidden warning dialog from a sound driver. The slicing script now clicks it away.</li>
+</ul>
+
+</div></main>
+<footer class="site-foot"><div class="wrap">
+Designed in OpenSCAD, printed on a Bambu Lab A1 mini. Sources, STLs and print files are on
+<a href="https://github.com/BenjaminWhiting/fun-with-fishtanks">GitHub</a>. Sizes are in inches; the models themselves are in millimetres.
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+paho-mqtt==2.1.0   # bambu.py: printer status, upload and start over LAN
+numpy              # STL checks
+scipy              # printcheck.py
+pillow             # images

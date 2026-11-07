@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring · Fun with Fishtanks</title>
+<meta name="description" content="A 3D-printed floating ring that corrals red root floaters, kept afloat by sealed air chambers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 11c5-8 15-9 22-3l7-5v16l-7-5c-7 6-17 5-22-3z" fill="#7fd0dc"/><circle cx="9" cy="9.5" r="1.6" fill="#0f3d48"/></svg>Fun with Fishtanks</a>
+<nav class="nav" aria-label="Site"><a href="../index.html">Home</a><a href="../projects/risers.html">Risers</a><a href="../projects/walkway.html">Walkway</a><a href="../projects/ring.html" aria-current="page">Ring</a><a href="../how-its-made.html">How it's made</a></nav>
+</div></header>
+<section class="hero"><div class="wrap hero-grid">
+<div><span class="badge next">Not printed yet</span><h1>Ring</h1><p class="lede">Red root floaters drift all over the surface and into the filter. A floating ring keeps them in one patch. This one is as big as the A1 mini's bed allows.</p><ul class="facts"><li>6 15/16&Prime; across</li><li>&frac12;&Prime; wide</li><li>9/16&Prime; tall</li><li>8 sealed air chambers</li><li>PETG</li><li>2 h 10 m</li><li>52 g</li></ul></div>
+<img src="../img/ring/ring.webp" alt="A teal ring with two small holes" width="1600" height="1000">
+</div></section>
+<main><div class="wrap">
+<h2>Making plastic float</h2><p>PETG is denser than water (1.27 g/cm&sup3;), and so is PLA. The only common filament that floats, polypropylene, won't stick to a textured PEI plate without special tape. So the ring floats on air sealed inside it: the hollow channel is closed all round, with four perimeters of wall.</p><figure><img src="../img/ring/ring-cut.webp" alt="Cut open: the air channel has a 45-degree peaked roof, so it closes over without supports." loading="lazy"><figcaption>Cut open: the air channel has a 45-degree peaked roof, so it closes over without supports.</figcaption></figure><p>The channel is split into eight chambers by thin walls, so one leak can't sink the ring; it would just sit a little lower on that side. Two solid lugs carry a 1/8-inch hole for fishing line or a suction-cup tether, in case it wanders.</p><p>By the numbers (52 g of PETG from the slicer), it should sit about 5/16 inch deep with about 7/32 inch above the water, and could carry another 35 g before sinking. Before it goes in the tank, it gets a day's float test in a bucket: if one side sits low, a chamber leaks.</p><h2 id="files">Files</h2><div class="table-wrap"><table><thead><tr><th>File</th><th>What it is</th><th>Print time</th><th>Plastic</th></tr></thead><tbody><tr><td><a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/blob/main/projects/ring/floater_ring.scad">floater_ring.scad</a></td><td>OpenSCAD source: size, wall, chambers and lugs are all settings</td><td class="num"></td><td class="num"></td></tr><tr><td><a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/blob/main/projects/ring/float_calc.py">float_calc.py</a></td><td>Works out the weight and float line from the STL</td><td class="num"></td><td class="num"></td></tr><tr><td><a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/blob/main/projects/ring/stl/floater_ring.stl">floater_ring.stl</a></td><td>The ring</td><td class="num"></td><td class="num"></td></tr><tr><td><a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/blob/main/projects/ring/print/floater_ring_petg.gcode.3mf">floater_ring_petg.gcode.3mf</a></td><td>The ring, ready to print</td><td class="num">2 h 10 m</td><td class="num">52 g</td></tr></tbody></table></div><p class="note">The <code>.gcode.3mf</code> files are sliced for a <strong>Bambu Lab A1 mini</strong> with a 0.4 mm nozzle and the textured PEI plate, with no start or finish tune. For any other printer, slice the STL yourself. Everything prints without supports.</p><h2 id="photos">From the real tank</h2><p class="photos-soon">Photos of the printed parts on the tank are on their way.</p>
+</div></main>
+<footer class="site-foot"><div class="wrap">
+Designed in OpenSCAD, printed on a Bambu Lab A1 mini. Sources, STLs and print files are on
+<a href="https://github.com/BenjaminWhiting/fun-with-fishtanks">GitHub</a>. Sizes are in inches; the models themselves are in millimetres.
+</div></footer>
+</body>
+</html>

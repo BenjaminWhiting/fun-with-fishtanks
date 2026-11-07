@@ -1,0 +1,4 @@
+{
+    "ip": "192.168.1.50",
+    "serial": "optional: only if Bambu Studio knows more than one printer"
+}
