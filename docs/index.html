@@ -4,60 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fun with Fishtanks</title>
-<meta name="description" content="Adventures in designing and 3D-printing things for a 36-inch rimless aquarium.">
+<meta name="description" content="What happens when you pair a 3D printer with an AI and point them both at a fish tank: a riser for the light, a Japanese boardwalk with a crooked bathhouse, and a floating ring for the plants.">
+<meta property="og:title" content="Fun with Fishtanks">
+<meta property="og:description" content="What happens when you pair a 3D printer with an AI and point them both at a fish tank: a riser for the light, a Japanese boardwalk with a crooked bathhouse, and a floating ring for the plants.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://benjaminwhiting.github.io/fun-with-fishtanks/">
+<meta property="og:image" content="https://benjaminwhiting.github.io/fun-with-fishtanks/img/walkway/bath-v13.webp">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#14130f">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<header class="site-head"><div class="wrap">
-<a class="brand" href="index.html"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 11c5-8 15-9 22-3l7-5v16l-7-5c-7 6-17 5-22-3z" fill="#7fd0dc"/><circle cx="9" cy="9.5" r="1.6" fill="#0f3d48"/></svg>Fun with Fishtanks</a>
-<nav class="nav" aria-label="Site"><a href="index.html" aria-current="page">Home</a><a href="projects/risers.html">Risers</a><a href="projects/walkway.html">Walkway</a><a href="projects/ring.html">Ring</a><a href="how-its-made.html">How it's made</a></nav>
+<a class="skip-link" href="#main">Skip to the content</a>
+<header class="masthead"><div class="masthead-inner wrap">
+<p class="masthead-mark"><a href="https://benjaminwhiting.github.io/">benjaminwhiting.github.io</a><span>/</span><a href="index.html">fun-with-fishtanks</a></p>
+<nav class="tabs" aria-label="Site"><a href="index.html" aria-current="page">Story</a><a href="projects/risers.html">Risers</a><a href="projects/walkway.html">Walkway</a><a href="projects/ring.html">Ring</a><a href="how-its-made.html">How it's made</a><a class="away" href="https://github.com/BenjaminWhiting/fun-with-fishtanks">GitHub <span aria-hidden="true">↗</span></a></nav>
 </div></header>
-<section class="hero"><div class="wrap hero-grid">
-<div><h1>Fun with Fishtanks</h1><p class="lede">Adventures in designing and 3D-printing things for a 36-inch rimless aquarium: risers for the light, a Japanese walkway that clips onto the glass with a crooked bathhouse at its end, and a floating ring for the plants.</p><ul class="facts"><li>36&Prime; rimless tank</li><li>8 mm glass</li><li>Bambu Lab A1 mini</li><li>PETG</li><li>OpenSCAD</li></ul></div>
-<img src="img/walkway/bath-v13.webp" alt="A many-roofed red and green bathhouse on the corner of the walkway" width="1600" height="1000">
-</div></section>
-<main><div class="wrap">
-
-<h2>The projects</h2>
-<div class="cards">
-<a class="card" href="projects/risers.html"><img src="img/risers/gate-set.webp" alt="Grey risers with ginkgo leaves over an orange pump" loading="lazy">
-<div class="body"><span class="badge done">Printed</span><h3>Risers</h3><p>Lift the light 5 inches: a clamp-on riser with a slatted bonsai at one end, and a gate over the filter pump at the other.</p></div></a>
-<a class="card" href="projects/walkway.html"><img src="img/walkway/bath-v12.webp" alt="Bathhouse and boardwalk on the tank corner" loading="lazy">
-<div class="body"><span class="badge ">Printing</span><h3>Walkway</h3><p>A 1:48 Japanese garden boardwalk along the back glass, with a fishing landing in the middle and a bathhouse at its end.</p></div></a>
-<a class="card" href="projects/ring.html"><img src="img/ring/ring.webp" alt="Teal floating ring" loading="lazy">
-<div class="body"><span class="badge next">Not printed yet</span><h3>Ring</h3><p>A floating corral, as big as the print bed allows, to keep red root floaters in one place.</p></div></a>
+<main id="main">
+<div class="hero wrap">
+<p class="eyebrow">A 3D printer, an AI and a fish tank</p>
+<h1>Fun with Fishtanks</h1>
+<p class="lede">I wanted to see how well a 3D printer and an AI could work as a pair, so I gave them my fish tank. This is what the three of us made in two weeks: a riser for the light, a Japanese boardwalk for the back glass with a crooked bathhouse on its corner, and a floating ring for the plants.</p>
 </div>
-
-<h2>House rules</h2>
-<ul class="rules">
-<li><strong>No supports</strong>Every part is shaped to print as it stands: 45-degree undersides, flat faces on the plate.</li>
-<li><strong>Plug together, no glue</strong>Pegs, bow-tie keys and tongue-and-groove joints, so pieces come apart for painting.</li>
-<li><strong>Fit test first</strong>A small test print before trusting any press fit on a big part.</li>
-<li><strong>Check every move</strong>Each file's moves are checked against the A1 mini's limits before it's sent.</li>
-<li><strong>Silent printer</strong>The start and finish tunes are taken out of every file.</li>
-</ul>
-
-<h2>Adventures so far</h2>
-<ul class="timeline">
-<li><time>26 Oct 2026</time>The first riser model, and a gauge with eight slots to measure the glass without calipers: the 8.4 mm slot fit best.</li>
-<li><time>29 Oct</time>A gauge file turned out to carry another printer's start-up moves, reaching far past the A1 mini's 7-inch bed. It was stopped in time, and since then every file gets a full move check before it goes to the printer.</li>
-<li><time>30 Oct</time>The 5-inch bonsai riser printed in PETG. The pump end of the tank got a gate instead.</li>
-<li><time>2 Nov</time>The walkway began: corners, 6-inch straights and bow-tie keys. The first corner printed overnight.</li>
-<li><time>3 Nov</time>A straight piece stopped during start-up with a Z-axis fault. The rule since: find the cause before pressing go again.</li>
-<li><time>4 Nov</time>The centre piece printed, but its thin knee braces snapped off mid-print. Thicker 4 mm braces fixed it. The printer has also printed in silence since that day.</li>
-<li><time>3 to 6 Nov</time>Thirteen versions of the bathhouse, from a serious pagoda to a playful, crooked one, then split into seven parts that print without supports.</li>
-<li><time>6 to 7 Nov</time>All four bathhouse plates printed: about 14&frac34; hours and 276 g of PETG.</li>
-<li><time>7 Nov</time>A floating ring for red root floaters, kept afloat by eight sealed air chambers.</li>
-</ul>
-<p>How the files get made, checked and sent to the printer is on <a href="how-its-made.html">How it's made</a>.</p>
-<h2 id="photos">From the real tank</h2><p class="photos-soon">Photos of the printed parts on the tank are on their way.</p>
-</div></main>
-<footer class="site-foot"><div class="wrap">
-Designed in OpenSCAD, printed on a Bambu Lab A1 mini. Sources, STLs and print files are on
-<a href="https://github.com/BenjaminWhiting/fun-with-fishtanks">GitHub</a>. Sizes are in inches; the models themselves are in millimetres.
+<figure class="plate wrap"><img src="img/walkway/bath-v13.webp" alt="A many-roofed red and green bathhouse standing on the corner of an aquarium"><figcaption>The bathhouse, version thirteen. Every picture on this site is a render made from the model files; photos of the real prints on the real tank are on their way.</figcaption></figure>
+<div class="story wrap">
+<p class="kicker">Why this exists</p><h2 id="experiment">The experiment</h2><p>This whole thing is an exercise. I write software, and I wanted to know what an AI coding assistant could do once the result had to exist in the real world. A 3D printer is a good test for that, because a part either fits the glass or it doesn't.</p><p>It went like this. I said what I wanted in plain words. The AI wrote the part as code, checked that it could print without supports, sliced it and, when I said go, sent it to the printer over my home network. Then I held the result against the tank and told it what was wrong.</p><p>The tank is a 36-inch rimless one with 8 mm glass. The printer is a Bambu Lab A1 mini, which has a bed about 7 inches square, so anything longer than that comes apart into pieces that plug together.</p><ul class="lessons"><li><strong>It's quick where I'm slow</strong>The bathhouse went through thirteen versions in three days. Each one was a sentence or two from me and a fresh set of pictures back.</li><li><strong>It can't hold anything</strong>It has never seen my tank. We printed a little comb with eight slots just to learn how thick the glass is. A ring that looked fine on screen was far too chunky in the hand, and a cat that looked right on screen came off the plate under an inch tall.</li><li><strong>It makes confident mistakes</strong>One file carried another printer's start-up moves and tried to drive the nozzle well past the edge of the bed. After a start-up fault, a quick retry sent the toolhead into the nozzle wiper. Both turned into rules it now follows.</li><li><strong>The taste is still mine</strong>The first bathhouse was a perfectly good pagoda and I didn't like it. Most of what I typed was some form of too serious, fewer pipes, or thinner.</li></ul><h2 id="projects">Three projects</h2><ul class="entries">
+<li class="entry"><img src="img/risers/gate-set.webp" alt="Grey risers with ginkgo leaves cut through them, over an orange pump" loading="lazy">
+<div><h3 class="entry-title"><a href="projects/risers.html">Risers</a></h3>
+<p class="entry-summary">The light needed to sit 5 inches higher. One end got a clamp-on riser with a bonsai cut through it. The other end has the filter pump in the way, so it got a gate.</p></div>
+<p class="entry-meta"><span>Riser printed</span><span>Oct 2026</span></p></li>
+<li class="entry"><img src="img/walkway/bath-v12.webp" alt="A bathhouse and boardwalk on the corner of the tank" loading="lazy">
+<div><h3 class="entry-title"><a href="projects/walkway.html">Walkway</a></h3>
+<p class="entry-summary">A 1:48 Japanese garden boardwalk along the back glass, with a fishing landing in the middle, a bathhouse where it reaches the corner, and a cat on the way.</p></div>
+<p class="entry-meta"><span>Printing</span><span>Nov 2026</span></p></li>
+<li class="entry"><img src="img/ring/ring-thin.webp" alt="A thin teal hoop" loading="lazy">
+<div><h3 class="entry-title"><a href="projects/ring.html">Ring</a></h3>
+<p class="entry-summary">A floating hoop that keeps the red root floaters in one patch. It took three tries to get it thin enough, and then it needed a chain.</p></div>
+<p class="entry-meta"><span>Printed</span><span>Nov 2026</span></p></li>
+</ul><p class="kicker">26 October to 7 November 2026</p><h2 id="diary">How it went</h2><ol class="log"><li><time>26 Oct</time><div>The first riser model, and a gauge with eight slots to measure the glass without calipers. The 8.4 mm slot fit best, and every clamp since has used it.</div></li><li><time>29 Oct</time><div>A gauge file turned out to carry another printer's start-up moves, reaching far past the 7-inch bed. It was stopped in time. Since then every file gets all of its moves checked before it goes anywhere near the printer.</div></li><li><time>30 Oct</time><div>The 5-inch bonsai riser printed in PETG. The pump end of the tank got a gate designed for it instead.</div></li><li><time>2 Nov</time><div>The walkway began with a corner piece, because a corner seemed the most stable place to start. It printed overnight.</div></li><li><time>3 Nov</time><div>A straight piece stopped during start-up with a Z-axis fault, and the hurried retry went badly. The rule since: find the cause before pressing go again.</div></li><li><time>4 Nov</time><div>The centre landing printed, but its thin knee braces snapped off halfway through. Thicker ones fixed it. This is also the day I asked for the printer's start and finish tunes to go, and it has printed in silence ever since.</div></li><li><time>3 to 6 Nov</time><div>Thirteen versions of the bathhouse, from a serious pagoda to a playful, crooked one, then cut into seven parts that print without supports.</div></li><li><time>6 to 7 Nov</time><div>All four bathhouse plates printed: about 14&frac34; hours and 276 g of PETG.</div></li><li><time>7 Nov</time><div>The floating ring, three times over. The first was too thick, the second never printed, and the third is thinner than a pencil and took 27 minutes. Then a chain for it, and a cat to hold the chain.</div></li></ol><h2 id="rules">The rules we ended up with</h2><p>None of these were there on day one. Each came out of something going wrong, or nearly.</p><ul class="lessons"><li><strong>No supports</strong>Every part is shaped to print as it stands: undersides at 45 degrees, flat faces on the plate. Where one is truly needed it's a thin fin that snaps off.</li><li><strong>Plug together, no glue</strong>Pegs, bow-tie keys and tongue-and-groove joints, so pieces come apart again for painting.</li><li><strong>Fit test first</strong>A small test print before trusting any press fit on a big part. Twenty minutes of test saves five hours of print.</li><li><strong>Check every move</strong>Each file's moves are followed, start to finish, against what the A1 mini can reach before it's sent.</li><li><strong>Nothing starts without a go</strong>The AI can upload a file and start it, but only after I've said go for that exact file.</li><li><strong>A silent printer</strong>The start and finish tunes are taken out of every file, and each new file is checked for them.</li></ul><h2 id="next">Still to come</h2><p>The last pieces of the boardwalk. A cat fisherman for the landing: the first one printed under an inch tall, so the next is nearly three times the size. A set of stairs to carry the walk up and over the filter. And photos of all of it on the real tank.</p><p>How the files get made, checked and sent to the printer is on <a href="how-its-made.html">How it's made</a>.</p>
+<p class="onward"><a href="projects/risers.html">Next: Risers <span aria-hidden="true">→</span></a><a href="https://github.com/BenjaminWhiting/fun-with-fishtanks">All the files on GitHub <span aria-hidden="true">↗</span></a></p>
+</div>
+</main>
+<footer class="wrap"><div class="colophon">
+<p><a href="https://benjaminwhiting.github.io/">Ben Whiting</a></p>
+<p>Models, print files and images: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Code: MIT. <a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/blob/main/LICENSE.md">License <span aria-hidden="true">↗</span></a></p>
 </div></footer>
 </body>
 </html>

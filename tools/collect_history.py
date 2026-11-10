@@ -11,7 +11,7 @@ SCRATCH = sys.argv[1] if len(sys.argv) > 1 else None
 PROJECTS = [
     ("1_light_riser", "The light riser", r"^(bonsai_|riser_design|hygger_riser|glass_gauge|gauge_|riser_test|riser_top|riser_b1|b1_front|r5_front|top_iso|true_)"),
     ("2_pump_gate", "The pump-side gate", r"^(pump_gate|ginkgo|riser_set_diagram|beam_|gopt_|gate_|dia_|set_)"),
-    ("3_boardwalk", "The boardwalk", r"^(boardwalk_|bathhouse_|bw_|piece_|pieces_|plate_|plates_|guide_v|arm1|arm2|done|plate|tank|close_|front_|land_close|land_front_\d|plan\.|c_(hero|explode|plate))"),
+    ("3_boardwalk", "The boardwalk", r"^(boardwalk_|bathhouse_|cat_fisherman|bw_|piece_|pieces_|plate_|plates_|guide_v|arm1|arm2|done|plate|tank|close_|front_|land_close|land_front_\d|plan\.|c_(hero|explode|plate))"),
     ("4_printer_camera", "From the printer's camera", r"^bed_"),
     ("5_floating_ring", "The floating ring", r"^(floater_ring|ring_)"),
 ]
@@ -70,6 +70,22 @@ CAPTIONS = {
     "boardwalk_bathhouse_v10": "v10: you asked for a bigger back opening (now 1\" tall and about 3 1/8\" wide, two back windows dropped) and, rather than thicken the carp tails, to remove the whole carp pole; the chimney is now the tallest point.",
     "boardwalk_bathhouse_v11": "v11: you asked for fewer pipes and a cleaner look rather than risk print quality, then a full clipping audit. Only the steam line, the pump's two pipes and the tank outlet stay. The audit found the main and top roofs' curled corners lifting off the walls (fixed: flat undersides over the walls) and three hidden clips (window frames, pump pipe flanges, pipe ends inside rooms).",
     "boardwalk_bathhouse_v12": "v12: you saw walls clipping the roofs and gaps under the bump-outs. The walls' tops had sat a hair under the roofs' surfaces and showed through; now they sit 1/32\" or more inside (the windows unchanged), and the lattice boxes' walls rise to meet their sloping roofs.",
+    "cat_fisherman_mock14": "Cat fisherman, mock 14: a solid hat sitting on top of his head, one piece, ears coming up through it as triangles; crisper legs and tail.",
+    "cat_fisherman_mock15": "Cat fisherman, mock 15: the hat sunk down onto his head so its brim sits just above his eyes; ears re-fitted, cleaner brim edge.",
+    "cat_fisherman_mock13": "Cat fisherman, mock 13: one piece (hat fused, ears shorter), legs tucked under a round belly, no gaps at the tail or cushion.",
+    "cat_fisherman_mock12": "Cat fisherman, mock 12: full audit. Clean sealed meshes, two print parts that need no supports, a chain channel, and a read pass: arms on the belly, whole paws, triangular ears, a proper foot, slimmer collar.",
+    "cat_fisherman_mock11": "Cat fisherman, mock 11: smaller ears, legs rebuilt as a defined cross-legged pair, the tail curled up his back.",
+    "cat_fisherman_mock10": "Cat fisherman, mock 10: face laid out like a cat's (nose on top, ω mouth below, fanned whiskers), crisper creases for definition, shoulders lower and wider.",
+    "cat_fisherman_mock9": "Cat fisherman, mock 9: no second cap under the hat (it slides down until it rests on his head), lower shoulders, slimmer limbs, ears through the hat.",
+    "cat_fisherman_mock8": "Cat fisherman, mock 8: after a look at Buddha-style cat figurines, rebuilt as one smoothly blended sculpt: pear body, short thick arms, cross-legged base, closed smiling eyes; the hat is part of the surface so it sits on his head.",
+    "cat_fisherman_mock7": "Cat fisherman, mock 7: arms bent at the elbow, elbows tucked against his sides, paws forward on the line.",
+    "cat_fisherman_mock6": "Cat fisherman, mock 6: a headband lining inside the hat follows his head, so the hat sits right on it with no gap; ears up through it.",
+    "cat_fisherman_mock5": "Cat fisherman, mock 5: hat tipped a little forward (40 degrees) and still seated on his head; rounder head and body.",
+    "cat_fisherman_mock4": "Cat fisherman, mock 4: double was too big, so the hat is 1 1/2 times the original, tipped back and resting on his head, ears popping out through it.",
+    "cat_fisherman_mock3": "Cat fisherman, mock 3: the straw hat twice the size and tipped right back, framing his face like a halo.",
+    "cat_fisherman_mock2": "Cat fisherman, mock 2: lucky-cat shape on a zabuton cushion behind the landing's front rail, both paws on an articulated float line; whiskers and tail lie flat; three nesting ring sizes.",
+    "cat_fisherman_mock1": "Cat fisherman, mock 1: a 1:48 cat on the landing's open edge holding a 9\" float line clipped to the floating ring; a stopper behind him sets the length for refills. Umbrella or both paws on the line.",
+    "boardwalk_filter_bridge_v1": "You asked for the walk to go up and over the filter and still be a riser. Concept: the walk turns the printed back-right corner and climbs 12 steps, crosses the filter on a span that lifts off, and comes down to a landing at the front; a small roofed gate in the middle carries the light, its ridge the riser's locked cradle. The ridge looks too tall for the roof.",
     "boardwalk_bathhouse_v13_parts": "v13: split into seven printable parts for the A1 mini, as you asked: snap-together (tongue-and-groove walls, a pegged chimney), no supports, no lanterns for now, 1/2\" teeth. Undersides reshaped to 45 degrees, the front gable filled, the pipes resting on things; four silent PETG plates.",
     "bed_now": "The plate before a gate print.",
     "bed_corner": "The plate before the first corner.",
@@ -96,7 +112,7 @@ def sources():
         for n in os.listdir(d) if os.path.isdir(d) else []:
             if n.lower().endswith((".png", ".jpg")): yield os.path.join(d, n), True
     if SCRATCH:
-        for sub in ("", "guide", "mocks", "ct", "sguide", "ring"):
+        for sub in ("", "guide", "mocks", "ct", "sguide", "ring", "bridge"):
             d = os.path.join(SCRATCH, sub)
             if not os.path.isdir(d): continue
             for n in os.listdir(d):
@@ -117,7 +133,7 @@ for src, sheet in sources():
 
 # the scratchpad's mock-up models and sheet scripts, so the drawings can be rebuilt
 if SCRATCH:
-    for sub in ("", "guide", "mocks", "ct", "sguide", "bath"):
+    for sub in ("", "guide", "mocks", "ct", "sguide", "bath", "bridge"):
         d = os.path.join(SCRATCH, sub)
         if not os.path.isdir(d): continue
         for n in os.listdir(d):

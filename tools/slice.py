@@ -7,6 +7,7 @@ clicks OK on that one warning and stops (showing the text) on any other dialog.
 
 Usage: python -I slice.py <out dir> <name.gcode.3mf> <filament.json> <model.stl> [more models]
 Run it from tools/presets: machine.json / process.json are read from the current folder.
+The slicer records each model's full path in the output; scrub_3mf.py shortens those to file names afterwards.
 """
 import ctypes
 import subprocess
@@ -14,6 +15,9 @@ import sys
 import time
 from ctypes import wintypes
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import scrub_3mf  # noqa: E402
 
 EXE = r"C:\Program Files\Bambu Studio\bambu-studio.exe"
 u32 = ctypes.WinDLL("user32")
@@ -85,6 +89,8 @@ def main():
         time.sleep(0.3)
     print(f"exit code {proc.returncode} after {time.time() - start:.0f} s")
     for f in sorted(Path(out_dir).glob("*")):
+        if f.name.endswith(".3mf") and scrub_3mf.scrub(str(f)):
+            print(f"  {f.name}: took the local folder paths out of its metadata")
         print(f"  {f.name}  {f.stat().st_size} bytes")
 
 

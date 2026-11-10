@@ -1,7 +1,9 @@
 # Fun with Fishtanks
 
-Designing and 3D-printing things for a 36" rimless aquarium: a riser for the light, a 1:48 Japanese
-boardwalk that clips onto the glass, a crooked bathhouse at the end of it, and whatever the tank needs next.
+An experiment in pairing a 3D printer with an AI, using a 36" rimless aquarium as the test bench. I described what
+I wanted in plain words; the AI wrote the models as code, checked them, sliced them and sent them to the printer;
+I held the results against the glass and said what was wrong. So far that has made a riser for the light, a 1:48
+Japanese boardwalk that clips onto the glass with a crooked bathhouse on its corner, and a floating ring for the plants.
 
 **The story, with pictures: https://benjaminwhiting.github.io/fun-with-fishtanks/**
 
@@ -9,7 +11,7 @@ boardwalk that clips onto the glass, a crooked bathhouse at the end of it, and w
 | --- | --- | --- |
 | [Risers](projects/risers) | Lift a Hygger light 5": a clamp-on riser with a slatted bonsai, and a gate over the filter pump | Riser printed |
 | [Walkway](projects/walkway) | 1:48 garden boardwalk along the back glass, with a fishing landing and a bathhouse end piece | Printing |
-| [Ring](projects/ring) | A 6 15/16" floating corral for red root floaters, with eight sealed air chambers | Not printed yet |
+| [Ring](projects/ring) | A thin floating hoop for red root floaters, 6 15/16" across, with a printed chain and a clip for the glass | Printed |
 
 ## What's in here
 
@@ -19,6 +21,7 @@ projects/<name>/        OpenSCAD source (risers, walkway, walkway/bathhouse, rin
     print/              sliced, ready-to-print files (.gcode.3mf)
 tools/                  slicing, checking and printer tools (see tools/README.md)
 docs/                   the GitHub Pages site
+CLAUDE.md               the standing rules the AI reads at the start of every session
 ```
 
 ## Printing
@@ -37,3 +40,8 @@ The sources need [OpenSCAD](https://openscad.org) (made with 2021.01). Each file
 ```
 openscad -o corner.stl -D 'part="corner_plate"' projects/walkway/boardwalk.scad
 ```
+
+## License
+
+Models, print files, images and the site: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Code in `tools/`: MIT. Details, including the Bambu Studio presets, in [LICENSE.md](LICENSE.md).

@@ -18,6 +18,7 @@ Scripts for checking, slicing and printing on a Bambu Lab A1 mini in LAN mode, f
 | `layer_check.py <stl>` | An older, simpler support check for parts whose holes run along X. |
 | `audit_stl.py` | STL loading and measuring helpers. |
 | `slice.py <out dir> <name.gcode.3mf> <filament.json> <model.stl>` | Runs Bambu Studio's command-line slicer. Run it from `presets/`. It clicks away the "DLLs have been injected" warning (from a sound driver) that otherwise hangs the slicer. |
+| `scrub_3mf.py <file.gcode.3mf>` | Takes local folder paths (which include your user name) out of a sliced file's metadata. `slice.py` runs it for you; the G-code isn't touched. |
 | `preflight.py <file.gcode.3mf> <PETG\|PLA>` | Checks a file before it's sent: intact, sliced for the A1 mini, every move (arcs included) inside the A1 mini's range, material, and the printer idle with the right spool. Only send a file that prints ALL CHECKS PASSED. |
 | `plot_toolpath.py`, `gcode_envelope.py` | Draw and measure a file's moves. |
 | `snapshot.py <out.jpg>` | Grabs one frame from the printer's camera, to see that the plate is clear. |
