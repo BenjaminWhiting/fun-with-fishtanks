@@ -177,7 +177,7 @@ code {
 /* Tabs sit on the masthead's bottom rule; the current one underlines it. */
 .tabs {
   display: flex;
-  gap: 0 1.75rem;
+  gap: 0 1.4rem;
   margin-bottom: -1px;
 }
 
@@ -193,6 +193,11 @@ code {
 .tabs a[aria-current="page"] {
   border-bottom-color: var(--accent);
   color: var(--ink);
+}
+
+/* Two of the tab labels have a shorter form for phones. */
+.tabs .short {
+  display: none;
 }
 
 /* ---------- Hero ---------- */
@@ -580,7 +585,8 @@ td.num {
 
 /* ---------- Narrow screens ---------- */
 
-@media (max-width: 52rem) {
+/* Six tabs and the mark don't fit side by side below this. */
+@media (max-width: 70rem) {
   .masthead-mark {
     display: none;
   }
@@ -596,9 +602,16 @@ td.num {
   .tabs::-webkit-scrollbar {
     display: none;
   }
+}
 
-  .tabs .away {
+@media (max-width: 44rem) {
+  .tabs .away,
+  .tabs .long {
     display: none;
+  }
+
+  .tabs .short {
+    display: inline;
   }
 }
 

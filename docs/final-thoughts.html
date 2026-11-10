@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final thoughts · Fun with Fishtanks</title>
+<meta name="description" content="Looking back on two weeks of pairing a 3D printer with an AI on one fish tank: it went really well, and here is what went wrong along the way.">
+<meta property="og:title" content="Final thoughts · Fun with Fishtanks">
+<meta property="og:description" content="Looking back on two weeks of pairing a 3D printer with an AI on one fish tank: it went really well, and here is what went wrong along the way.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://benjaminwhiting.github.io/fun-with-fishtanks/final-thoughts.html">
+<meta property="og:image" content="https://benjaminwhiting.github.io/fun-with-fishtanks/img/walkway/full.webp">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0d1716">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to the content</a>
+<header class="masthead"><div class="masthead-inner wrap">
+<p class="masthead-mark"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 11c5-8 15-9 22-3l7-5v16l-7-5c-7 6-17 5-22-3z"/></svg><a href="https://benjaminwhiting.github.io/">benjaminwhiting.github.io</a><span>/</span><a href="index.html">fun-with-fishtanks</a></p>
+<nav class="tabs" aria-label="Site"><a href="index.html">Story</a><a href="projects/risers.html">Risers</a><a href="projects/walkway.html">Walkway</a><a href="projects/ring.html">Ring</a><a href="how-its-made.html"><span class="long">How it's made</span><span class="short" aria-hidden="true">How</span></a><a href="final-thoughts.html" aria-current="page"><span class="long">Final thoughts</span><span class="short" aria-hidden="true">Thoughts</span></a><a class="away" href="https://github.com/BenjaminWhiting/fun-with-fishtanks">GitHub <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+<main id="main">
+<div class="hero wrap">
+<p class="eyebrow">Looking back</p>
+<h1>Final thoughts</h1>
+<p class="lede">Ultimately, things went really well. In two weeks, a printer and an AI turned a handful of plain-language requests into a riser that fits the glass, a boardwalk, a seven-part bathhouse and a floating ring thinner than a pencil.</p>
+</div>
+<figure class="plate wrap"><img src="img/walkway/full.webp" alt="A boardwalk running the length of a 36-inch aquarium"><figcaption>The boardwalk along the back of the 36-inch tank.</figcaption></figure>
+<div class="story wrap">
+<h2 id="pairing">Why the pairing worked</h2><p>Each side covered what the other couldn't. The AI was fast, and thorough about checking its own work. I could see the tank, hold the parts and say when something wasn't right.</p><p>Neither half would have got here alone. Thirteen versions of a bathhouse in three days is not something I'd have drawn by hand, and no amount of checking on a screen would have told the AI that a ring was too thick or a cat too small.</p><h2 id="lessons">What went wrong, and what it changed</h2><p>A few things did go wrong along the way. Each one left a check or a rule behind, and those have run on every file since.</p><ul class="lessons"><li><strong>Check every move, not just the part</strong>A file once carried another printer's start-up moves, reaching far past the 7-inch bed. It was stopped in time. Now preflight follows every move before a file is sent.</li><li><strong>Find the cause before trying again</strong>After a start-up fault, a quick restart without anyone looking at the printer sent the toolhead into the nozzle wiper. Now nothing restarts until the cause is found.</li><li><strong>Thin parts climb on their own</strong>Knee braces printed upside down grew as free-standing 45-degree sticks and snapped off. Anything that rises alone needs real thickness.</li><li><strong>A brim fills nearby holes</strong>A brim around a part that prints on a face full of sockets sealed every one of them with a thin film. Parts with holes near the edge print without a brim.</li><li><strong>Test the fit</strong>Lantern pegs with 0.15 mm of play came out loose. Small fit tests with several amounts of play now come before big parts.</li><li><strong>A screen isn't a hand</strong>A ring half an inch wide looked fine in a render and far too chunky in real life. A cat under an inch tall was the same lesson the other way round.</li><li><strong>A slicer that hangs</strong>The command-line slicer froze forever on a hidden warning dialog from a sound driver. The slicing script now clicks it away.</li><li><strong>Print files remember where they came from</strong>The slicer saves each model's full folder path, user name included, inside the print file. A script takes those out before anything is published.</li></ul>
+<p class="onward"><a href="index.html">Next: Story <span aria-hidden="true">→</span></a><a href="https://github.com/BenjaminWhiting/fun-with-fishtanks">All the files on GitHub <span aria-hidden="true">↗</span></a></p>
+</div>
+</main>
+<footer class="wrap"><div class="colophon">
+<p><a href="https://benjaminwhiting.github.io/">Ben Whiting</a></p>
+<p>Models, print files and images: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Code: MIT. <a href="https://github.com/BenjaminWhiting/fun-with-fishtanks/blob/main/LICENSE.md">License <span aria-hidden="true">↗</span></a></p>
+</div></footer>
+</body>
+</html>
