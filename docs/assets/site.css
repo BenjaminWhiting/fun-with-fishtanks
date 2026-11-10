@@ -1,13 +1,15 @@
 /* ---------- Tokens ---------- */
 
-/* Shares its look with benjaminwhiting.github.io: dark only, by design. */
+/* A sibling of benjaminwhiting.github.io: the same type and layout, in tank colours.
+   Deep-water paper, a water accent, and that site's orange kept as the koi. Dark only, by design. */
 :root {
-  --paper: #14130f;
-  --paper-raised: #1e1c16;
+  --paper: #0d1716;
+  --paper-raised: #152321;
   --ink: #ebe5d6;
-  --ink-muted: #a39c8c;
-  --rule: #37332a;
-  --accent: #f08a4b;
+  --ink-muted: #9aa69f;
+  --rule: #293b38;
+  --accent: #5fc7bd;
+  --koi: #f08a4b;
   --mat: #f8f8f8;
 
   --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
@@ -153,6 +155,25 @@ code {
   color: var(--rule);
 }
 
+.masthead-mark svg {
+  width: 1.3rem;
+  height: 0.85rem;
+  margin-right: 0.6rem;
+  vertical-align: -0.1rem;
+  fill: var(--accent);
+}
+
+/* A waterline under the masthead: the one flourish this site has that its parent doesn't. */
+.masthead::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent) 20%, var(--accent) 80%, transparent);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 /* Tabs sit on the masthead's bottom rule; the current one underlines it. */
 .tabs {
   display: flex;
@@ -186,7 +207,7 @@ code {
   font-size: 0.8125rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--koi);
 }
 
 h1 {
