@@ -10,7 +10,7 @@ Japanese boardwalk that clips onto the glass with a crooked bathhouse on its cor
 | Project | What it is | Status |
 | --- | --- | --- |
 | [Risers](projects/risers) | Lift a Hygger light 5": a clamp-on riser with a slatted bonsai, and a gate over the filter pump | Riser printed |
-| [Walkway](projects/walkway) | 1:48 garden boardwalk along the back glass, with a fishing landing and a bathhouse end piece | Printing |
+| [Walkway](projects/walkway) | 1:48 garden boardwalk along the back glass, with a fishing landing and a bathhouse end piece | Printed |
 | [Ring](projects/ring) | A thin floating hoop for red root floaters, 6 15/16" across, with a printed chain and a clip for the glass | Printed |
 
 ## What's in here

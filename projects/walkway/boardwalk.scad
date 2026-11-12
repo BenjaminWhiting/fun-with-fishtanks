@@ -56,6 +56,7 @@ key_waist = 3.5;     // ...and at the joint
 key_t = 2.8;         // thickness; it sits 0.2 below the deck in its 3.0 mm pocket
 key_depth = 3.0;     // pocket depth
 key_play = 0.15;     // pocket play each side
+plate_keys = 1;      // keys on a straight plate; 2 prints a spare
 
 /* [Corner] */
 corner_arm = 81.25;  // each arm reaches this far from the glass corner (3 13/16 in from the deck's outer corner)
@@ -520,5 +521,5 @@ else {
   // key for the joint it adds
   translate([0, 0, teeth]) rotate([0, 0, 90]) deck();
   for (i = [0:len(sides) - 1]) translate([deck_w / 2 + 8 + i * (post_h + peg_len + post) + i * 6 + peg_len, 0, 0]) railing_flat();
-  translate([-deck_w / 2 - 14, 0, 0]) rotate([0, 0, 90]) key_part();
+  for (j = [0:plate_keys - 1]) translate([-deck_w / 2 - 14, (j - (plate_keys - 1) / 2) * 24, 0]) rotate([0, 0, 90]) key_part();
 }
